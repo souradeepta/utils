@@ -19,19 +19,17 @@ Installation
 
     Clone the repository:
 
-    ```bash
-
+```bash
 git clone https://github.com/yourusername/folder-cleaner.git
 cd folder-cleaner
 ```
 Install dependencies (if any):
 ```
-    pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 Usage
 
 ```css
-
 python folder_cleaner.py <path> [-o OUTPUT_FILE] [--debug]
 ```
 Arguments
@@ -45,7 +43,6 @@ Example
 Find and delete empty folders in C:\Projects directory, enable debug mode, and save deleted folders to logs/deleted_folders.log:
 
 ```lua
-
 python folder_cleaner.py C:\Projects -o logs/deleted_folders.log --debug
 ```
 Logging
