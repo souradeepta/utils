@@ -4,7 +4,7 @@
 
 Folder Cleaner is a Python script designed to find and delete empty folders within a specified directory. It uses multithreading for efficient folder traversal and deletion, and it provides logging capabilities to track operations and errors.
 
-###Features
+### Features
 - Multithreaded Execution: Utilizes ThreadPoolExecutor for concurrent operations, enhancing performance by processing multiple folders simultaneously.
 - Logging: Implements logging to capture informational messages, errors, and debug information based on user-defined debug mode.
 - Timestamped Output: Saves a list of deleted folders with a timestamp to facilitate tracking and auditing.
@@ -25,7 +25,7 @@ cd folder-cleaner
 pip install -r requirements.txt
 ```
 ### Usage
-```css
+```bash
 python folder_cleaner.py <path> [-o OUTPUT_FILE] [--debug]
 ```
 Arguments
@@ -46,5 +46,37 @@ Debug mode (--debug) enables detailed logging, including permission errors and f
 Ensure proper permissions are set for deleting folders, especially on systems with restricted access.
 Use caution when deleting folders as data loss may occur if not used correctly.
 
-### License
+# File Extension Utility
+This script is designed to append a specified extension to files in a given directory if they don't already have a recognized extension. The default extension to append is `.mp4`, but this can be easily changed.
+
+## Features
+- Checks files in a specified directory.
+- Appends a target extension (default `.mp4`) to files without a recognized extension.
+- Utilizes the Strategy design pattern for handling files with known and unknown extensions.
+- Comprehensive error handling for robustness.
+- Extensible and maintainable code with detailed comments and type hints.
+
+## Common Extensions
+The script recognizes a wide range of common file extensions including but not limited to:
+- Document formats: `.pdf`, `.doc`, `.docx`, `.txt`, `.xls`, `.xlsx`, `.ppt`, `.pptx`
+- Media formats: `.mp3`, `.mp4`, `.mkv`, `.avi`, `.wav`, `.mov`, `.jpg`, `.jpeg`, `.png`, `.gif`, `.bmp`, `.tif`, `.tiff`
+- Archives and executables: `.zip`, `.rar`, `.tar`, `.gz`, `.iso`, `.exe`, `.msi`
+- Web and code files: `.html`, `.css`, `.js`, `.json`, `.xml`, `.sql`, `.py`, `.java`, `.class`, `.jar`
+- Configuration and system files: `.ini`, `.cfg`, `.log`, `.bat`, `.dll`, `.sh`, `.bin`, `.key`, `.pem`
+
+## Usage
+1. Clone the repository or download the script.
+2. Open a terminal and navigate to the directory containing the script.
+3. Run the script with the following command:
+```bash
+python extension_util.py <directory_path>
+```
+Replace `<directory_path>` with the path to the directory you want to process.
+
+### Example
+```bash
+python extension_util.py /path/to/directory
+```
+
+# License
 This project is licensed under the MIT License - see the LICENSE file for details.
