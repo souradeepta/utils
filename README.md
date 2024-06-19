@@ -1,20 +1,20 @@
 # utils
 
-## Folder Cleaner
+# Folder Cleaner
 
 Folder Cleaner is a Python script designed to find and delete empty folders within a specified directory. It uses multithreading for efficient folder traversal and deletion, and it provides logging capabilities to track operations and errors.
 
-### Features
+## Features
 - Multithreaded Execution: Utilizes ThreadPoolExecutor for concurrent operations, enhancing performance by processing multiple folders simultaneously.
 - Logging: Implements logging to capture informational messages, errors, and debug information based on user-defined debug mode.
 - Timestamped Output: Saves a list of deleted folders with a timestamp to facilitate tracking and auditing.
 
-### Requirements
+## Requirements
 Python 3.x
 argparse library (typically included with Python standard library)
 logging library (included with Python standard library)
 
-### Installation
+## Installation
 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/folder-cleaner.git
@@ -24,7 +24,7 @@ cd folder-cleaner
 ```
 pip install -r requirements.txt
 ```
-### Usage
+## Usage
 ```bash
 python folder_cleaner.py <path> [-o OUTPUT_FILE] [--debug]
 ```
@@ -33,16 +33,16 @@ Arguments
     -o OUTPUT_FILE, --output OUTPUT_FILE: Optional. Output file path for saving the list of deleted folders. Default is output/deleted_folders.txt.
     --debug: Optional flag to enable debug mode. Displays detailed debug messages.
 
-### Example
+## Example
 Find and delete empty folders in C:\Projects directory, enable debug mode, and save deleted folders to logs/deleted_folders.log:
 ```python
 python folder_cleaner.py C:\Projects -o logs/deleted_folders.log --debug
 ```
-### Logging
+## Logging
 Logs are generated in the console and optionally in a log file (logs/folder_cleaner.log by default).
 Debug mode (--debug) enables detailed logging, including permission errors and folder operations.
 
-### Notes
+## Notes
 Ensure proper permissions are set for deleting folders, especially on systems with restricted access.
 Use caution when deleting folders as data loss may occur if not used correctly.
 
@@ -76,6 +76,34 @@ Replace `<directory_path>` with the path to the directory you want to process.
 ### Example
 ```bash
 python extension_util.py /path/to/directory
+```
+# Website Ping Utility
+This project contains a Python script to ping a website repeatedly until it responds successfully. The script includes retry logic with exponential backoff and provides logging for status updates and errors.
+
+## Features
+- Pings a specified website URL until a successful response is received.
+- Logs status updates and errors.
+- Implements retry logic with exponential backoff.
+- Cross-platform compatibility (no OS-specific dependencies).
+
+## Requirements
+- `requests` library
+
+## Installation
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/website-ping-utility.git
+cd website-ping-utility
+``
+## Usage
+To use the script, run the following command:
+```bash
+python ping_util.py <url>
+```
+Replace <url> with the website URL you want to ping.
+## Example
+```bash
+python ping_util.py https://example.com
 ```
 
 # License
