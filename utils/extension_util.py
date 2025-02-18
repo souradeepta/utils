@@ -18,14 +18,12 @@ class ExtensionStrategy:
     """
     Abstract base class for extension handling strategies.
     """
-
     def __init__(self, target_extension: str):
         self.target_extension = target_extension
 
     def handle_file(self, file_path: str) -> None:
         """
         Handle the file based on the strategy.
-
         Args:
             file_path (str): Full path to the file.
         """
@@ -36,11 +34,9 @@ class KnownExtensionStrategy(ExtensionStrategy):
     """
     Strategy for handling files with known extensions.
     """
-
     def handle_file(self, file_path: str) -> None:
         """
         Handle the file with a known extension.
-
         Args:
             file_path (str): Full path to the file.
         """
@@ -51,11 +47,9 @@ class UnknownExtensionStrategy(ExtensionStrategy):
     """
     Strategy for handling files with unknown extensions.
     """
-
     def handle_file(self, file_path: str) -> None:
         """
         Handle the file with an unknown extension by appending `target_extension`.
-
         Args:
             file_path (str): Full path to the file.
         """
@@ -70,10 +64,8 @@ class UnknownExtensionStrategy(ExtensionStrategy):
 def has_known_extension(filename: str) -> bool:
     """
     Check if the filename has a known extension.
-
     Args:
         filename (str): Name of the file.
-
     Returns:
         bool: True if the extension is in COMMON_EXTENSIONS, False otherwise.
     """
@@ -84,7 +76,6 @@ def has_known_extension(filename: str) -> bool:
 def append_extension_to_files(directory_path: str, strategy: ExtensionStrategy) -> None:
     """
     Append `TARGET_EXTENSION` to files in `directory_path` based on `strategy`.
-
     Args:
         directory_path (str): Path to the directory containing files.
         strategy (ExtensionStrategy): Strategy object defining how to handle files.
